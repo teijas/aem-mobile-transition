@@ -1,6 +1,6 @@
 {
   "name": "aem-mobile-transition",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This is a jquery plugin that emulates the expand and contract transition used in Adobe DPS (now called AEM Mobile) applications.",
   "main": "index.js",
   "repository": {
