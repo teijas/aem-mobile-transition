@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="aem-mobile-transition.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap_grid/js/bootstrap.min.js"></script>
+    <link href="bootstrap_grid/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="aem_mobile_transition.css" />
+    <script src="jquery.keyframes.min.js"></script>
+    
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+</head>
+
+<body>
+       <div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+                    <div class="box box-navy" id="box1">
+                        <p>The wren<br>
+                        Earns his living<br>
+                        Noiselessly.<br>
+                        </p>
+                        <p class="text-right">- Kobayahsi Issa</p>
+                        <p>The lamp once out<br>
+                        Cool stars enter<br>
+                        The window frame.<br>
+                        </p>
+                        <p class="text-right">- Natsume Soseki</p>
+                    </div>
+            </div>
+
+            <div class="col-xs-4">
+                <div class="box box-green" data-target="#page1">
+                    <p>Consider me<br>
+                    As one who loved poetry<br>
+                    And persimmons.<br>
+                    </p>
+                    <p class="text-right"> - Masaoaka Shiki</p>
+                </div>
+            </div>
+
+            <div class="col-xs-4">
+                <div class="box box-green" data-target="#page1">
+                    <p>An old silent pond...<br>
+                    A frog jumps into the pond,<br>
+                    splash! Silence again.<br>
+                    </p>
+                    <p class="text-right"> - Matsuo Bashō</p>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="box bg-teal" style="height: 150px;" data-target="#page1">
+           <p>Read more poems</p>
+           </div>
+           
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="box box-navy" data-target="#page1">
+                    <p>The wren<br>
+                    Earns his living<br>
+                    Noiselessly.<br>
+                    </p>
+                    <p class="text-right">- Kobayahsi Issa</p>
+                    <p>The lamp once out<br>
+                    Cool stars enter<br>
+                    The window frame.<br>
+                    </p>
+                    <p class="text-right">- Natsume Soseki</p>
+                </div>
+            </div>
+
+            <div class="col-xs-4">
+                <div class="box box-green" data-target="#page1">
+                    <p>Consider me<br>
+                    As one who loved poetry<br>
+                    And persimmons.<br>
+                    </p>
+                    <p class="text-right"> - Masaoaka Shiki</p>
+                </div>
+            </div>
+
+            <div class="col-xs-4">
+                <div class="box box-green" data-target="#page1">
+                    <p>An old silent pond...<br>
+                    A frog jumps into the pond,<br>
+                    splash! Silence again.<br>
+                    </p>
+                    <p class="text-right"> - Matsuo Bashō</p>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="bg-teal article" id="page1">
+            <div class="container">
+                <p>Kobayashi Issa (小林 一茶?, June 15, 1763 – January 5, 1828),[1] was a Japanese poet and lay Buddhist priest of the Jōdo Shinshū sect known for his haiku poems and journals. He is better known as simply Issa (一茶?), a pen name meaning Cup-of-tea[2] (lit. "one [cup of] tea"). He is regarded as one of the four haiku masters in Japan, along with Bashō, Buson and Shiki - "the Great Four, Basho, Buson, Issa, Shiki".[3]</p>
+
+<p>Reflecting the popularity and interest in Issa as man and poet, Japanese books on Issa outnumber those on Buson, and almost equal in number those on Bashō.[4]</p>
+                <p>The wren<br>
+                    Earns his living<br>
+                    Noiselessly.<br>
+                    </p>
+                    <p>- Kobayahsi Issa</p>
+                    <p>The lamp once out<br>
+                    Cool stars enter<br>
+                    The window frame.<br>
+                    </p>
+            <p>- Natsume Soseki</p>
+            
+            <button class="btn btn-warning" id="backBtn">Go Back</button>
+        </div>
+        </div>
+
+
+<script>
+    $(document).ready(function(){
+        $('.box').dpsTransition({article:'#page1'});
+        $('.box').on('dps.expanded',function(e) {
+            console.log('tada!');
+        });
+    }); 
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+/*Super Styles*/
+/*No Gutters*/
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0; }
+
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0; }
+
+.vcenter {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%); }
+
+.footer-fixed {
+  position: fixed;
+  bottom: 0; }
+
+.container {
+  padding-top: 15px; }
+
+body {
+  font: 100% Helvetica, sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-color: #003D5C;
+  line-height: 1.2em; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+a:hover {
+  text-decoration: none; }
+
+.box, .box-navy, .box-green {
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 95%; }
+
+.box-navy {
+  background-color: #1A9481;
+  color: #FDEEA7; }
+
+.box-green {
+  background-color: #9BCC93; }
+
+.bg-teal {
+  padding: 10px 15px;
+  background: #1A9481;
+  color: #003D5C; }
+
+/*# sourceMappingURL=new_styles.css.map */
