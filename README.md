@@ -40,7 +40,7 @@ Give each card element a `data-target` attribute that points to the correspondin
 ```
 
 ###Back Button  
-The back button triggers the contract animation. You can include it inside your `.article` or anywhere else on the page that is visible after the article has expanded (e.g. in the header). Just give the back button an id of `#backBtn` or pass in a custom id as an option (see below).
+The back button triggers the contract animation. You can include it inside your `.article` or anywhere else on the page that is visible after the article has expanded (e.g. in the header). Just give the back button an id of `#backBtn` or pass in a custom id or class as an option (see below).
 ```html
 <div class="your-card-class" data-target="#page1">
   ...
@@ -51,23 +51,23 @@ The back button triggers the contract animation. You can include it inside your 
 ###Initialize 
 
 ```js
-$('.your-card-element').dpsTransition();
+$('.your-card-element').aemTransition();
 ```
 
 ##Options  
 ###'back'
-Allows you to pass in a custom id for the back button.
+Allows you to pass in a custom id or class for the back button.
 ```js
-  $('.your-card-element').dpsTransition({'back':'#yourBtn'});
+  $('.your-card-element').aemTransition({'back':'#yourBtn'});
 ```
-###'header'
-If your layout has a header that is visible when the article expands, include the height of the header in this option.
+###'yOffset', 'xOffset'
+If you need to adjust the x or y offset of the transition you can add that number here.
 ```js
-  $('.your-card-element').dpsTransition({'header':'50'});
+  $('.your-card-element').aemTransition({'yOffset':'50'});
 ```
 ###'article'
 Instead of using the `data-target` attribute you can pass in the article id here.
 ```js
-  $('.your-card-element').dpsTransition({'article':'#yourArticleId'});
+  $('.your-card-element').aemTransition({'article':'#yourArticleId'});
 ```
 

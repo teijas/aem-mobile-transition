@@ -125,8 +125,8 @@
 
 <script>
     $(document).ready(function(){
-        $('.box').dpsTransition({article:'#page1'});
-        $('.box').on('dps.expanded',function(e) {
+        $('.box').aemTransition({'article':'#page1'});
+        $('.box').on('aem.expanded',function(e) {
             console.log('tada!');
         });
     }); 
