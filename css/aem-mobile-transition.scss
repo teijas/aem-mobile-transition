@@ -1,0 +1,215 @@
+/*Animation*/
+.article {
+    height: 100vh;
+    position:fixed;
+    top:0;
+    z-index:-2;
+    width: 100vw;
+    opacity:0;
+    overflow-y:auto;
+}
+
+body.article-open{
+    overflow:hidden;
+}
+
+$phasetotal: 400ms;
+
+$phase1: $phasetotal*0.3;
+$phase2: $phasetotal*0.7;
+
+$phasetotala: 400ms;
+$phase1a: $phasetotala*0.2;
+$phase2a: $phasetotala*0.1;
+$phase3a: $phasetotala*0.7;
+$phase4a: $phasetotala*0.2;
+
+.aem-fullscreen-wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    opacity: 1;
+}
+
+.vcenter,
+.aem-fullscreen-wrapper video {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+a.close-button {
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    width: 44px;
+    height: 44px;
+    right: 0;
+    top: 0;
+    z-index: 3000;
+}
+
+.ani {
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+   
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.ani-expand {
+    position:absolute;
+    z-index: 10;
+    background-color: #fff;
+    
+    -webkit-animation-name: canvas-expand;
+    animation-name: canvas-expand;
+    
+    -webkit-animation-duration: $phase2;
+    animation-duration: $phase2;
+    
+    -webkit-animation-delay: $phase1;
+    animation-delay:$phase1;
+   
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    
+    -webkit-transform-origin:center;
+    transform-origin:center;
+}
+
+.ani-fullscreen {
+    position:absolute;
+    z-index: 10;
+    background-color: #fff;
+    
+    -webkit-animation-name: canvas-expand;
+    animation-name: canvas-expand;
+    
+    -webkit-animation-duration: $phase2;
+    animation-duration: $phase2;
+    
+    -webkit-animation-delay: $phase1;
+    animation-delay:$phase1;
+   
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    
+    -webkit-transform-origin:center;
+    transform-origin:center;
+}
+
+.ani-fade {
+    -webkit-animation-name: fade-out;
+    animation-name: fade-out;
+    
+    -webkit-animation-duration: $phase1;
+    animation-duration: $phase1;
+}
+
+
+.ani-appear {
+    -webkit-animation-name:fade-in;
+    animation-name:fade-in;
+   
+    -webkit-animation-duration: $phase2;
+    animation-duration: $phase2;
+}
+
+.ani-contract {
+    -webkit-animation-name: canvas-fade, card-contract,fade-out-2;
+    animation-name: canvas-fade, card-contract,fade-out-2;
+    
+    -webkit-animation-duration: $phase2a, $phase3a,$phase4a;
+    animation-duration: $phase2a, $phase3a,$phase4a;
+    
+    -webkit-animation-delay: $phase1a, $phase1a+$phase2a, $phase1a+$phase2a+$phase3a;
+    animation-delay: $phase1a, $phase1a+$phase2a,$phase1a+$phase2a+$phase3a;
+}
+
+.ani-exit-fullscreen {
+    -webkit-animation-name: card-contract;
+    animation-name: card-contract;
+    
+    -webkit-animation-duration: $phase3a;
+    animation-duration: $phase3a;
+    
+    -webkit-animation-delay: $phase1a+$phase2a;
+    animation-delay: $phase1a+$phase2a;
+}
+
+
+.ani-contract > :first-child {
+    -webkit-animation-name: fade-out;
+    animation-name: fade-out;
+    
+    -webkit-animation-duration: $phase2a;
+    animation-duration: $phase2a;
+    
+    -webkit-animation-delay: $phase1a;
+    animation-delay: $phase1a;
+    
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.ani-reverse {
+    -webkit-animation-direction:reverse;
+    animation-direction:reverse;
+}
+
+@-webkit-keyframes card-expand {
+    100% {transform: scale(1.2); height:50vh;}
+}
+@keyframes card-expand {
+    100% {transform: scale(1.2); height:50vh;}
+}
+
+@-webkit-keyframes canvas-contract {
+    to {transform:scale(0.9);}
+}
+@keyframes canvas-contract {
+    to {transform:scale(0.9);}
+}
+
+@-webkit-keyframes canvas-fade {
+    to {background-color:#fff;}
+}
+@keyframes canvas-fade {
+    to {background-color:#fff;}
+}
+
+@-webkit-keyframes fade-out {
+    100% {opacity:0;}
+}
+@keyframes fade-out {
+    100% {opacity:0;}
+}
+
+@-webkit-keyframes fade-out-2 {
+    to {opacity:0;}
+}
+@keyframes fade-out-2 {
+    to {opacity:0;}
+}
+
+@-webkit-keyframes fade-in {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@keyframes fade-in {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+@keyframes canvas-expand {
+    from {transform:scale(1.2);}
+    to {transform: translate(0)scale(0)};
+}
