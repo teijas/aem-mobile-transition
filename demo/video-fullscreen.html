@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>
+      Fullscreen video
+    </title>
+
+    <!--JS-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <!--CSS-->
+<!--    <link rel="stylesheet" type="text/css" href="css/fullscreen.css" />-->
+    <link rel="stylesheet" type="text/css" href="bootstrap_grid/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/aem-mobile-transition.css" />
+
+  </head>
+  <body>  
+
+    <div class="content">
+            <a id="backBtn" class="close-button" href="goto://FolioNavigation/lastview" style="display:none;">&times;</a>
+                <video width="100%" height="auto" poster="" controls src="video-fullscreen.mp4">
+                </video>
+            <img src="01.jpg" class="img-responsive img-card">
+      </div>
+
+      <!--/content-->
+      
+      <script type="text/javascript" src="js/jquery.keyframes.min.js"></script>
+      <script type="text/javascript" src="js/aem-mobile-transition.js"></script>
+<!--      <script type="text/javascript" src="js/fullscreen.js"></script>-->
+      
+      <script>
+        $(document).ready(function(){
+            $('.img-card').aemTransition({'mode':'fullscreen'});
+            $('video').aemTransition({'mode':'video','event':'play'});
+            $('video').on('aem.expanded',function(e) {
+                console.log('tada!');
+            });
+        }); 
+      </script>
+  </body>
+</html>
