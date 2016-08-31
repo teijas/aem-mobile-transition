@@ -35,7 +35,7 @@
       <script>
         $(document).ready(function(){
             $('.img-card').aemTransition({'mode':'fullscreen'});
-            $('video').aemTransition({'mode':'video','event':'play'});
+            $('video').aemTransition({'mode':'video-fullscreen','event':'play'});
             $('video').on('aem.expanded',function(e) {
                 console.log('tada!');
             });
